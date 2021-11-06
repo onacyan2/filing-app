@@ -1,7 +1,4 @@
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <%= form_with model: @user, url: user_registration_path, class: 'main', local: true do |f| %>
@@ -17,7 +14,7 @@
     <div class="login-form">
       <div class="form-group">
         <label>Company Name</label>
-        <%= f.text_area :company_name, class:"form-control", id:"campany-name" %>
+        <%= f.text_area :name, class:"form-control", id:"name" %>
       </div>
       <div class="form-group">
         <label>Email</label>
