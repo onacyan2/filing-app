@@ -16,16 +16,16 @@
     <div class="login-form">
       <div class="form-group">
         <label>Email</label>
-        <%= f.text_area :email, class:"form-control", id:"email" %>
+        <%= f.email_field :email, class:"form-control", id:"email" %>
       </div>
       <div class="form-group">
         <label>Password</label>
-        <%= f.text_area :password, class:"form-control", id:"password" %>
+        <%= f.password_field :password, class:"form-control", id:"password" %>
       </div>
     </div>
       
-    <button type="submit" class="btn btn-login-green">Login</button>
-    <button type="submit" class="btn btn-registration-orange">Register</button>
+    <%= f.submit "Login", class:"btn btn-login-green" %>
+    <%= f.submit "Register", class:"btn btn-registration-orange" %>
   </div>
 
 <% end %>
