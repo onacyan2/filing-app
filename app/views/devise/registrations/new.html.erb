@@ -5,33 +5,35 @@
 
   <div class="sidenav">
     <div class="login-main-text">
-      <h2>Application<br> Register Page</h2>
-      <p>Login or register from here to access.</p>
+      <h2>Application<br> Signup Page</h2>
+      <p>Login or Signup from here to access.</p>
     </div>
   </div>
 
   <div class="col-md-6 col-sm-12">
+  <div class="devise_error_message">
+    <%= render "devise/shared/error_messages", resource: @user %>
+  </div>
     <div class="login-form">
       <div class="form-group">
         <label>Company Name</label>
-        <%= f.text_area :name, class:"form-control", id:"name" %>
+        <%= f.text_area :name, class:"form-control", id:"name", placeholder:"Co., Ltd. Please do not attach" %>
       </div>
       <div class="form-group">
         <label>Email</label>
-        <%= f.email_field :email, class:"form-control", id:"email" %>
+        <%= f.email_field :email, class:"form-control", id:"email", placeholder:"Please enter your PC email address.", autofocus: true %>
       </div>
       <div class="form-group">
         <label>Password</label>
-        <%= f.password_field :password, class:"form-control", id:"password" %>
+        <%= f.password_field :password, class:"form-control", id:"password", placeholder:"6 characters maximum" %>
       </div>
       <div class="form-group">
         <label>Password Confirmation</label>
-        <%= f.password_field :password_confirmation, class:"form-control", id:"password-confirmation" %>
+        <%= f.password_field :password_confirmation, class:"form-control", id:"password-confirmation", placeholder:"Please input your password again for confirmation" %>
       </div>
     </div>
-
-    <%= f.submit "Login", class:"btn btn-login-orange" %>
-    <%= f.submit "Register", class:"btn btn-registration-green" %>
+    <%= link_to 'Login', new_user_session_path, class: "btn btn-login-orange" %>
+    <%= f.submit "Signup", class:"btn btn-registration-green" %>
   </div>
 
 <% end %>
