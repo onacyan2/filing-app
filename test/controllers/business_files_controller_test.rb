@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FilesControllerTest < ActionDispatch::IntegrationTest
+class BusinessFilesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

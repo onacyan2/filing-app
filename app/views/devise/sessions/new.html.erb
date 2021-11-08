@@ -1,5 +1,3 @@
-<!------ Include the above in your HEAD tag ---------->
-
 <%= form_with model: @user, url: user_session_path, class: 'main', local: true do |f| %>
 
   <div class="sidenav">
@@ -10,10 +8,11 @@
   </div>
 
   <div class="col-md-6 col-sm-12">
-  <div class="devise_error_message">
-    <%= render "devise/shared/error_messages", resource: @user %>
-  </div>
-    <div class="login-form">
+    <div class="devise_error_message">
+      <%= render "devise/shared/error_messages", resource: @user %>
+    </div>
+
+    <div class="log-in-form">
       <div class="form-group">
         <label>Email</label>
         <%= f.email_field :email, class:"form-control", id:"email", autofocus: true %>
@@ -24,8 +23,8 @@
       </div>
     </div>
       
-    <%= f.submit "Login", class:"btn btn-login-green" %>
-    <%= link_to 'Signup', new_user_registration_path, class: "btn btn-registration-orange" %>
+    <%= f.submit "Login", class:"btn btn-light btn-green" %>
+    <%= link_to 'Signup', new_user_registration_path, class: "btn btn-light btn-orange" %>
   </div>
 
 <% end %>
