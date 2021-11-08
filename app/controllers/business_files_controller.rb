@@ -6,7 +6,8 @@ class BusinessFilesController < ApplicationController
 
   def create
     @file = BusinessFile.new(file_params)
-    if @item.save
+    
+    if @file.save
       redirect_to root_path
     else
       render :new
@@ -16,7 +17,7 @@ class BusinessFilesController < ApplicationController
   private
 
   def file_params
-    params.require(:business_files).permit(:name).marge(user_id: current_user.id)
+    params.require(:business_file).permit(:file_title).merge(user_id: current_user.id)
   end
 
 end
