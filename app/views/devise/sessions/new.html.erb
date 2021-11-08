@@ -12,12 +12,12 @@
       <%= render "devise/shared/error_messages", resource: @user %>
     </div>
 
-    <div class="log-in-form">
-      <div class="form-group">
+    <div class="row g-3 log-in-form">
+      <div class="form-label">
         <label>Email</label>
         <%= f.email_field :email, class:"form-control", id:"email", autofocus: true %>
       </div>
-      <div class="form-group">
+      <div class="form-label">
         <label>Password</label>
         <%= f.password_field :password, class:"form-control", id:"password" %>
       </div>

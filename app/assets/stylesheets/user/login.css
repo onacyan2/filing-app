@@ -1,14 +1,9 @@
-.main {
-  padding: 0px 20px !important;
-  margin-left: 40% !important; 
-}
-
 .devise-error-message{
   margin-top: 120px;
   color: red;
 }
 
 .log-in-form{
-  margin-top: 120px;
+  margin-top: 120px !important;
   margin-bottom: 20px;
 }
