@@ -15,19 +15,19 @@
     <div class="row g-3 sign-up-form">
       <div class="form-label">
         <label>Company Name</label>
-        <%= f.text_area :name, class:"form-control", id:"name", placeholder:"Co., Ltd. Please do not attach" %>
+        <%= f.text_area :name, class:"login-form form-control", id:"name", placeholder:"Co., Ltd. Please do not attach" %>
       </div>
       <div class="form-label">
         <label>Email</label>
-        <%= f.email_field :email, class:"form-control", id:"email", placeholder:"Please enter your PC email address.", autofocus: true %>
+        <%= f.email_field :email, class:"login-form form-control", id:"email", placeholder:"Please enter your PC email address.", autofocus: true %>
       </div>
       <div class="form-label">
         <label>Password</label>
-        <%= f.password_field :password, class:"form-control", id:"password", placeholder:"6 characters maximum" %>
+        <%= f.password_field :password, class:"login-form form-control", id:"password", placeholder:"6 characters maximum" %>
       </div>
       <div class="form-label">
         <label>Password Confirmation</label>
-        <%= f.password_field :password_confirmation, class:"form-control", id:"password-confirmation", placeholder:"Please input your password again for confirmation" %>
+        <%= f.password_field :password_confirmation, class:"login-form form-control", id:"password-confirmation", placeholder:"Please input your password again for confirmation" %>
       </div>
     </div>
     <%= link_to 'Login', new_user_session_path, class: "btn btn-light btn-orange" %>
