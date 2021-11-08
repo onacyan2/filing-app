@@ -1,5 +1,9 @@
 class BusinessFilesController < ApplicationController
 
+  def index
+    @files = BusinessFile.order('created_at DESC')
+  end
+
   def new
     @file = BusinessFile.new
   end
