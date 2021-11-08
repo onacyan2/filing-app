@@ -9,11 +9,11 @@
 | encrypted_password | string | null: false               |
 
 ### Association
-- has_many :files
+- has_many :business_files
 
 
 
-## filesテーブル
+## business_filesテーブル
 
 |Column                  |Type        |Options                         |
 |------------------------|------------|--------------------------------|

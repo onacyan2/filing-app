@@ -1,0 +1,28 @@
+<h1 class="text-center text-success text-opacity-75 m-5">PLEASE MAKE A FILE!!</h1>
+  
+<%= form_with model: @file, local: true do |f| %>
+
+	<section class="bg-warning p-2 text-dark bg-opacity-50 p-5 mt-4">
+		<h3 class="text-white">File Name</h3>
+
+	 <div class="container">
+			<div class="row">
+	  		<div class="col">
+	 				<%= f.text_area :file_title, class:"file-title form-control mb-2", id:"file-title", placeholder:" " %>
+  			</div>
+  			<div class="col">
+  				<%= f.submit "Create", class:"btn btn-danger rounded-pill mb-2" %>
+				</div>
+			</div>
+		</div>
+  </section>
+
+	<div class="error-color">
+		<%= render 'shared/error_messages', model: f.object %>
+	</div>
+	
+<% end %>
+	
+<footer>
+	<p>© Omizu 2021</p>
+</footer>
