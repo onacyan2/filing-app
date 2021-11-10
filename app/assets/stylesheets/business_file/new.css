@@ -1,4 +1,12 @@
-.bg-warning{
+.file-create-page-body{
+  background-image: url("/assets/agnivesh-jayadeep-X-dHJLZGRpo-unsplash");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-secondary{
   width: 100%;
   height: 100%;
 }
@@ -16,21 +24,6 @@
 
 ::placeholder {
 font-size: 15px;
-}
-
-footer{
-	background: #000;
-	text-align: center;
-	padding: 5px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p{
-	color: #fff;
-	margin: 0;
-	font-size: 15px;
 }
 
 .error-color{
