@@ -30,22 +30,26 @@
 
 <body class="top-page-body">
 
-  <h1 class="text-center text-success text-opacity-75 m-5">File shelves</h1>
+  <h1 class="text-center text-white text-opacity-75 m-5">File shelves</h1>
 
-  <div class="container">
-    <div class="row row-cols-auto">
-      <div class="file-info col">
-        <ul> 
-          <% @files.each do |file| %>
-            <li>
-              <%= link_to(root_path, class:"file-outer-frame btn btn-primary") do %>
-                <h2 class='file-titles'><%= file.file_title %></h2>
-              <% end %>
-            </li>
-          <% end %>
-        </ul>
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <% @files.each do |file| %>
+          <div class="file-info col">
+            <div class="card">
+              <ul>
+                <li>
+                  <%= link_to(root_path, class:"file-link") do %>
+                    <div class="card-body file-outer-frame">
+                      <h2 class='file-titles'><%= file.file_title %></h2>
+                    </div>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
-  </div>
 
 </body>
