@@ -1,0 +1,43 @@
+.top-page-body{
+  background-image: url("/assets/agnivesh-jayadeep-X-dHJLZGRpo-unsplash");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.create-btn{
+  background-color: #F2D620 !important;
+}
+
+.log-out-btn{
+  background-color: #F89F05 !important;
+}
+
+.d-flex{
+  margin-right: 2%;
+}
+
+
+.file-info {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+.file-outer-frame{
+  margin: 20px;
+}
+
+.file-titles{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin: 30px;
+  padding: 10px;
+}
+
+ul{
+  list-style: none;
+  align-items: flex-end;
+}
+
