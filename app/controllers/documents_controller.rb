@@ -1,10 +1,10 @@
 class DocumentsController < ApplicationController
   before_action :authenticate_user!, only: [:index]
 
-  #def index
-    #@documents = Document.order("name")
-    #@file = BusinessFile.find(params[:business_file_id])
-  #end
+  # def index
+  # @documents = Document.order("name")
+  # @file = BusinessFile.find(params[:business_file_id])
+  # end
 
   def new
     @document = Document.new
@@ -13,13 +13,11 @@ class DocumentsController < ApplicationController
   def create
     @document = Documents.new(document_params)
     if @document.save
-      redirect_to  business_file_documents_path
+      redirect_to business_file_documents_path
     else
       render :new
     end
   end
-
-
 
   private
 
