@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_07_074600) do
+ActiveRecord::Schema.define(version: 2021_11_10_161517) do
 
   create_table "business_files", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "file_title", null: false
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 2021_11_07_074600) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_business_files_on_user_id"
+  end
+
+  create_table "documents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "company_name", null: false
+    t.string "company_name_kana", null: false
+    t.string "title", null: false
+    t.bigint "business_file_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["business_file_id"], name: "index_documents_on_business_file_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -34,4 +44,5 @@ ActiveRecord::Schema.define(version: 2021_11_07_074600) do
   end
 
   add_foreign_key "business_files", "users"
+  add_foreign_key "documents", "business_files"
 end
