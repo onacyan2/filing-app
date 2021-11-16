@@ -1,0 +1,58 @@
+.top-page-body{
+  background-image: url("/assets/maarten-van-den-heuvel-8EzNkvLQosk-unsplash.jpg");
+  min-height: 100vh;
+  max-width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.create-btn{
+  background-color: #F2D620 !important;
+}
+
+.log-out-btn{
+  background-color: #FFB38E !important;
+}
+
+.d-flex{
+  margin-right: 2%;
+}
+
+
+.file-info{
+  writing-mode: vertical-rl;
+}
+
+li{
+  list-style: none;
+}
+
+.file-link{
+  text-decoration: none;
+}
+
+
+.file-titles{
+  -ms-writing-mode: tb-rl;
+  text-orientation: upright;
+  white-space: normal;
+  color: rgba(0, 0, 0, .5);
+  height: 400px;
+}
+
+ul{
+  display: inline-block;
+  width: 100px;
+  height: 200px;
+  margin-right:3px;
+}
+
+.flex-nowrap{
+  width: 90%;
+  height: 500px;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-left: 5% !important;
+}
