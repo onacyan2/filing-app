@@ -30,11 +30,11 @@
 
 <body class="top-page-body">
 
-  <h1 class="text-center text-white text-opacity-75 m-5">File shelves</h1>
+  <h1 class="text-center text-white text-opacity-75 m-5"><%= "#{current_user.name}'s File shelves" %></h1>
 
     <div class="container-fluid">
       <div class="row flex-nowrap">
-        <% @files.each do |file| %>
+        <% current_user.business_files.each do |file| %>
           <div class="file-info col">
             <div class="card">
               <ul>

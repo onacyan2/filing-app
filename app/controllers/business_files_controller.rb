@@ -1,7 +1,6 @@
 class BusinessFilesController < ApplicationController
 
   def index
-    @files = BusinessFile.order('created_at DESC')
   end
 
   def new
@@ -21,7 +20,7 @@ class BusinessFilesController < ApplicationController
   private
 
   def file_params
-    params.require(:business_file).permit(:file_title).merge(user_id: current_user.id)
+    params.require(:business_file).permit(:file_title, user_ids:[])
   end
 
 end
