@@ -1,5 +1,4 @@
 class BusinessFilesController < ApplicationController
-
   def index
   end
 
@@ -9,7 +8,7 @@ class BusinessFilesController < ApplicationController
 
   def create
     @file = BusinessFile.new(file_params)
-    
+
     if @file.save
       redirect_to root_path
     else
@@ -20,7 +19,6 @@ class BusinessFilesController < ApplicationController
   private
 
   def file_params
-    params.require(:business_file).permit(:file_title, user_ids:[])
+    params.require(:business_file).permit(:file_title, user_ids: [])
   end
-
 end
