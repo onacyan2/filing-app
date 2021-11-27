@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_10_161517) do
+ActiveRecord::Schema.define(version: 2021_11_07_074600) do
 
   create_table "business_files", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "file_title", null: false
@@ -30,6 +30,18 @@ ActiveRecord::Schema.define(version: 2021_11_10_161517) do
     t.index ["business_file_id"], name: "index_documents_on_business_file_id"
   end
 
+  create_table "file_shelvers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "business_file_id", null: false
+    t.string "company_name", null: false
+    t.string "company_name_kana", null: false
+    t.string "title", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["business_file_id"], name: "index_file_shelvers_on_business_file_id"
+    t.index ["user_id"], name: "index_file_shelvers_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
@@ -45,4 +57,6 @@ ActiveRecord::Schema.define(version: 2021_11_10_161517) do
 
   add_foreign_key "business_files", "users"
   add_foreign_key "documents", "business_files"
+  add_foreign_key "file_shelvers", "business_files"
+  add_foreign_key "file_shelvers", "users"
 end
